@@ -1,3 +1,42 @@
+local Window = Rayfield:CreateWindow({
+   Name = "RVD HUB",
+   Icon = 0, 
+   LoadingTitle = "RVD HUB",
+   LoadingSubtitle = "",
+   Theme = "Default",
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, 
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+
+   Discord = {
+      Enabled = true, 
+      Invite = "https://discord.gg/UgNE3qsa2C", 
+      RememberJoins = true
+
+   KeySystem = false,
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", 
+      SaveKey = true, 
+      GrabKeyFromSite = false,
+      Key = {"Hello"} 
+   }
+})
+
+Rayfield:Notify({
+   Title = "RVD HUB EXECUTADO",
+   Content = "RVD HUB EXECTADO",
+   Duration = 6.5,
+   Image = 4483362458,
+})
+
 if not isfolder("BloxFruits") then makefolder("BloxFruits") end
 local ConfigFile = "BloxFruits/config.json"
 local HttpService = game:GetService("HttpService")
